@@ -27,5 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/SKE/year3/Software pattern/lib/servlet-api-3.0.20100224.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

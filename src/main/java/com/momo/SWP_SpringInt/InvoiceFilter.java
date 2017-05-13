@@ -3,6 +3,7 @@ package com.momo.SWP_SpringInt;
 import org.springframework.integration.annotation.Filter;
 import org.springframework.stereotype.Component;
 
+@Component
 public class InvoiceFilter {
 	public static final int LOW_ENOUGH_THRESHOLD = 10_000;
 	 

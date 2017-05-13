@@ -6,7 +6,7 @@
  
     <import resource = "invoices-int-schema.xml" />
  
-    
+    <context:component-scan base-package = "com.momo.SWP_SpringInt" />
  
     <task:executor id = "executor" pool-size="10" />
     <task:scheduler id = "scheduler" pool-size="10" />

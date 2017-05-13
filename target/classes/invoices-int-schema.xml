@@ -11,21 +11,19 @@
     <int:channel id = "newInvoicesChannel" />
 
     <int:gateway id="invoicesGateway"
-         service-interface="com.vrtoonjava.invoices.InvoiceCollectorGateway">
+         service-interface="com.momo.SWP_SpringInt.InvoiceCollectorGateway">
         <int:method name="collectInvoices" request-channel="newInvoicesChannel" />
      </int:gateway>
 
     <int:splitter
             input-channel="newInvoicesChannel"
             output-channel="singleInvoicesChannel" />
-
     <int:channel id = "singleInvoicesChannel" />
 
     <int:filter
         input-channel="singleInvoicesChannel"
         output-channel="filteredInvoicesChannel"
         ref="invoiceFilter" />
-
     <int:channel id = "filteredInvoicesChannel" />
 
     <int:recipient-list-router input-channel="filteredInvoicesChannel">
